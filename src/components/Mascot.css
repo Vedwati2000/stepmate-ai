@@ -1,0 +1,143 @@
+.owl-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+}
+
+.owl-svg {
+  width: 190px;
+  max-width: 100%;
+  overflow: visible;
+  animation: owl-float 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.owl-shadow {
+  width: 105px;
+  height: 13px;
+  margin-top: 4px;
+  margin-bottom: -3px;
+  background: rgba(70, 47, 35, 0.13);
+  border-radius: 50%;
+  animation: owl-shadow 3s ease-in-out infinite;
+}
+
+.owl-name {
+  margin-top: 8px;
+  color: #70452f;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.owl-status {
+  margin-top: 5px;
+  color: #795c4b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.owl-closed-eyes,
+.owl-sad-mouth {
+  display: none;
+}
+
+.owl-listening .owl-svg {
+  animation: owl-listen 0.8s ease-in-out infinite alternate;
+}
+
+.owl-listening .owl-closed-eyes {
+  display: block;
+}
+
+.owl-listening .owl-eyes {
+  display: none;
+}
+
+.owl-happy .owl-svg,
+.owl-celebrating .owl-svg {
+  animation: owl-dance 0.6s ease-in-out infinite alternate;
+}
+
+.owl-celebrating .owl-stars {
+  animation: owl-sparkle 0.5s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.owl-sad .owl-smile {
+  display: none;
+}
+
+.owl-sad .owl-sad-mouth {
+  display: block;
+}
+
+.owl-sad .owl-svg {
+  animation: owl-sad 1.5s ease-in-out infinite;
+}
+
+@keyframes owl-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes owl-shadow {
+  0%, 100% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scaleX(0.75);
+    opacity: 0.4;
+  }
+}
+
+@keyframes owl-listen {
+  from {
+    transform: rotate(-4deg) scale(1);
+  }
+
+  to {
+    transform: rotate(4deg) scale(1.03);
+  }
+}
+
+@keyframes owl-dance {
+  from {
+    transform: rotate(-8deg) translateY(0);
+  }
+
+  to {
+    transform: rotate(8deg) translateY(-7px);
+  }
+}
+
+@keyframes owl-sparkle {
+  from {
+    opacity: 0.45;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes owl-sad {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
